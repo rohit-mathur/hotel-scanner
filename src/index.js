@@ -3,9 +3,15 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const hbs = require("nodemailer-express-handlebars");
 const path = require("path");
+const bodyParser = require("body-parser");
 
 const app = express();
-
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
+app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
 
@@ -58,9 +64,9 @@ app.post("/sendInvoiceEmail", (req, res) => {
   res.status(200).send("Sent");
 });
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log("test"));
+app.listen(port, () => console.log("Server running on port " + port));
 
 // async..await is not allowed in global scope, must use a wrapper
 async function main(data) {

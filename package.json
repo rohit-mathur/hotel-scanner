@@ -1,0 +1,22 @@
+{
+  "name": "node-http-server",
+  "version": "1.0.0",
+  "description": "Node.js example server starter project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "express-handlebars": "6.0.2",
+    "fs": "0.0.1-security",
+    "nodemailer": "6.7.2",
+    "nodemailer-express-handlebars": "4.0.0",
+    "path": "0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  },
+  "keywords": []
+}

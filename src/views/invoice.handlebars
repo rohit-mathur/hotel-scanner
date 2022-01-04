@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="background-color:#1976d2; padding: 10px;">
+    <h1 style="color: #fff;">INVOICE</h1>
+  </div>
+  <div>
+    <p style="font-size:20px"><b>Invoice No.:</b> {{invoiceNumber}}</p>
+    <p style="font-size:20px"><b>Date:</b> {{date}}</p>
+  </div>
+  <div>
+    <div>
+      <h4>Billed To:</h4>
+      <p>{{name}}</p>
+      <p>{{address}}</p>
+      <p>{{zipcode}}</p>
+    </div>
+  </div>
+  <table width="100%">
+    <td><b>Name</b></td>
+    <td><b>Price</b></td>
+    <td><b>Quantity</b></td>
+    <td><b>Total</b></td>
+    {{#each data}}
+    <tr>
+      <td>{{name}}</td>
+      <td>{{price}}</td>
+      <td>{{qty}}</td>
+      <td>{{total}}</td>
+    </tr>
+    {{/each}}
+  </table>
+  <p style="font-size:20px"><b>Subtotal:</b> INR {{subtotal}}</p>
+  <p style="font-size:20px"><b>Tax:</b> INR {{tax}}</p>
+  <p style="font-size:20px"><b>Grand Total:</b> INR {{grandTotal}}</p>
+</body>
+
+</html>

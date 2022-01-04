@@ -36,7 +36,9 @@ const handlebarOptions = {
 };
 
 transporter.use("compile", hbs(handlebarOptions));
-
+app.get("/", (req, res) => {
+  res.send("Loaded");
+});
 app.post("/sendCheckInEmail", (req, res) => {
   const emailInfo = req.body;
   emailInfo.template = "checkin";
